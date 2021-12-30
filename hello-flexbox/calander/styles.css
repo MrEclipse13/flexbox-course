@@ -1,0 +1,137 @@
+$background: #ffffff;
+$sunday: #000000;
+$monday: #ff0000;
+$tuesday: #daa520;
+$wednesday: #ffdb58;
+$thursday: #00ff00;
+$friday: #0000ff;
+$saturday: #8f00ff;
+$hover: #808080;
+
+@mixin calendar-layout {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	justify-items: center;
+}
+
+@mixin sunday-styles {
+	color: $sunday;
+}
+
+@mixin monday-styles {
+	color: $monday;
+}
+
+@mixin tuesday-styles {
+	color: $tuesday;
+}
+
+@mixin wednesday-styles {
+	color: $wednesday;
+}
+
+@mixin thursday-styles {
+	color: $thursday;
+}
+
+@mixin friday-styles {
+	color: $friday;
+}
+
+@mixin saturday-styles {
+	color: $saturday;
+}
+
+@mixin date-styles {
+	width: 100%`;
+	height: 75px;
+	border: 1px solid black;
+	border-radius: 3px;
+	margin-right: 0px;
+	display: flex;
+	justify-content: center;
+}
+
+@minin date-hover {
+	&:hover {
+		background-color: $hover;
+	}
+}
+
+body {
+	background-color: $background;
+}
+
+.sunday {
+	@include sunday-styles;
+}
+
+.monday {
+	@include monday-styles;
+}
+
+.tuesday {
+	@include tuesday-styles;
+}
+
+.wednesday {
+	@include wednesday-styles;
+}
+
+.thursday {
+	@include thursday-styles;
+}
+
+.friday {
+	@include friday-styles;
+}
+
+.saturday {
+	@include saturday-styles;
+}
+
+.date {
+	@include date-styles;
+	@include date-hover;
+}
+
+.title-section {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.title-section {
+	color: $background;
+	font-size: 40px;
+	font-family: "montserrat", sans-serif;
+	-webkit-text-stroke: 2px black;
+	-webkit-text-fill-color: white;
+}
+
+.calendar-section > .calendar-days-container {
+	@include calendar-layout;
+}
+
+.calendar-row-one {
+	@include calendar-layout;
+}
+
+.calendar-row-two {
+	@include calendar-layout;
+}
+
+.calendar-row-three {
+	@include calendar-layout;
+}
+
+.calendar-row-four {
+	@include calendar-layout;
+}
+
+.calendar-row-five {
+	@include calendar-layout;
+}
+
+.calendar-row-six {
+	@include calendar-layout;
+}
